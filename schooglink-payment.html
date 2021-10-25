@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Payment | Schooglink's | Program Test</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Schooglink's Program Test, The first part is an open ended coding interview for which you can use any as per your preference - HTML, CSS, JavaScript, ReactJS, NextJS, TypeScript.">
+    <meta name="keywords" content="payments, chooglinks program test, HTML, CSS, JavaScript, ReactJS, NextJS, TypeScript.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font: 15px/25px 'PT Sans', sans-serif;
+            line-height: 1.1;
+        }
+
+        body {
+            background-color: #00c267;
+        }
+
+        #Main {
+            max-width: 1024px;
+            margin: 20px auto;
+            background: #fadf3c;
+            border-radius: 10px;
+            padding: 10px;
+            border: 5px double #000;
+        }
+
+        #Main h1 {
+            text-align: center;
+            font-size: 50px;
+            padding: 10px;
+        }
+
+        .Payment {
+            width: 60%;
+            margin: 10px auto;
+            min-width: 310px;
+        }
+
+        .Payment label {
+            font-size: 22px;
+            min-width: 200px;
+            display: inline-block;
+            margin: 5px auto;
+            text-transform: capitalize;
+        }
+
+        .Payment input {
+            padding: 5px;
+            margin: 5px;
+            min-width: 230px;
+        }
+
+        .pay {
+            color: #fff;
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #05ca6d;
+            border: 5px solid #000;
+            border-radius: 10px;
+        }
+
+
+        #submit {
+            min-width: 100px;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 767px) {
+            #Main h1 {
+                font-size: 40px;
+            }
+
+            .Payment {
+                width: 80%;
+            }
+
+            .pay {
+                margin: 10px auto;
+            }
+
+        }
+
+        @media screen and (max-width: 639px) {
+            #Main h1 {
+                font-size: 30px;
+            }
+
+            .Payment {
+                width: auto;
+            }
+
+        }
+
+        @media screen and (max-width: 479px) {
+            #Main h1 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .Payment {
+                width: auto;
+            }
+
+            .Payment label {
+                font-size: 16px;
+            }
+
+            .pay {
+                width: 230px;
+                margin: 0;
+            }
+
+            .Payment input {
+                min-width: 210px;
+            }
+
+        }
+
+    </style>
+
+    <!-- Jquery script common -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+
+    <!-- Custom script with stackoverflow reffence -->
+
+    <script>
+        // jQuery functions to hide and show the div
+        $(document).ready(function() {
+            $("select").change(function() {
+                $(this).find("option:selected")
+                    .each(function() {
+                        var optionValue = $(this).attr("value");
+                        if (optionValue) {
+                            $(".pay").not("." + optionValue).hide();
+                            $("." + optionValue).show();
+                        } else {
+                            $(".pay").hide();
+                        }
+                    });
+            }).change();
+        });
+
+    </script>
+
+    <script src="https://github.com/nosir/cleave.js.git"></script>
+</head>
+
+<body>
+    <!-- Payments based on User choices -->
+    <div id="Main">
+        <h1>Schooglink's - Program Test</h1>
+        <div class="Payment">
+            <form action="/action_page.php">
+                <label for="paytypes">Payment Types:</label>
+                <select name="payment" id="Payment">
+                    <option value="select">Select</option>
+                    <option value="cards">Credit/Debit Card</option>
+                    <option value="paypal">Paypal</option>
+                    <option value="upi">UPI</option>
+                </select>
+                <br>
+                <br>
+                <div class="cards pay">
+
+                    <h2>Please enter card details:</h2>
+
+                    <label for="fname">Card holder Name:</label>
+                    <input type="username" id="fname" name="fname" value=""><br>
+                    <label for="lname">Card number:</label>
+                    <input type="numeric" id="lname" name="lname" value=""><br>
+                    <label for="lname">Expiry:(mm/yy)</label>
+                    <input type="text" id="lname" name="lname" value=""><br>
+                    <label for="lname">CVV:</label>
+                    <input type="numeric" id="lname" name="lname" value=""><br>
+                </div>
+                <div class="paypal pay">
+                    <label for="fname">Please enter valid ID:</label>
+                    <input type="username" id="fname" name="fname" value="" required /><br>
+                </div>
+                <div class="upi pay">
+                    <label for="fname">Please enter valid UPI ID:</label>
+                    <input type="username" id="fname" name="fname" value="" required /><br>
+                </div>
+
+                <input type="submit" value="Proced Payment" id="submit">
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Schooglink's | Program Test</title> <!-- For page Title -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> <!-- For auto screen width -->
+    <meta name="description" content="Schooglink's Program Test, The first part is an open ended coding interview for which you can use any as per your preference - HTML, CSS, JavaScript, ReactJS, NextJS, TypeScript.">
+    <meta name="keywords" content="schooglinks program test, HTML, CSS, JavaScript, ReactJS, NextJS, TypeScript.">
+
+    <!-- Above are for SEO purpose -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google font's for look & feel -->
+
+    <!-- Page related -->
+    <style>
+        * {
+            font: 15px/25px 'PT Sans', sans-serif;
+            line-height: 1.1;
+        }
+
+        body {
+            background-color: #00c267;
+        }
+
+        #Main {
+            max-width: 1024px;
+            margin: 20px auto;
+            background: #fadf3c;
+            border-radius: 10px;
+            padding: 10px;
+            border: 5px double #000;
+        }
+
+        #Main h1 {
+            text-align: center;
+            font-size: 50px;
+            padding: 10px;
+        }
+
+        .login {
+            width: 60%;
+            margin: 10px auto;
+            min-width: 310px;
+        }
+
+        .login label {
+            font-size: 22px;
+            min-width: 150px;
+            display: inline-block;
+            margin: 5px auto;
+            text-transform: capitalize;
+        }
+
+        .login input {
+            padding: 5px;
+            margin: 5px;
+            min-width: 230px;
+        }
+
+        #submit {
+            min-width: 100px;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 767px) {
+            #Main h1 {
+                font-size: 40px;
+            }
+
+            .login {
+                width: 80%;
+            }
+
+        }
+
+        @media screen and (max-width: 639px) {
+            #Main h1 {
+                font-size: 30px;
+            }
+
+            .login {
+                width: auto;
+            }
+
+        }
+
+        @media screen and (max-width: 479px) {
+            #Main h1 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .login {
+                width: auto;
+            }
+
+            .login label {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="Main">
+        <!-- For main content -->
+        <h1>Schooglink's - Program Test</h1> <!-- header tag -->
+        <div class="login">
+            <!-- Login Form -->
+            <form action="/schooglink-payment.html">
+                <label for="fname">User Name:</label>
+                <input type="username" id="fname" name="fname" value="" required /><br>
+                <label for="lname">Email:</label>
+                <input type="email" id="lname" name="lname" value=""><br>
+                <label for="lname">Password:</label>
+                <input type="password" id="lname" name="lname" value="" required /><br>
+                <input type="submit" value="Login" id="submit">
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
